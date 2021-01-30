@@ -13,11 +13,11 @@ export default files.map(fileName => ({
     {file: `lib/${fileName.replace('.ts', '.js')}`, name: fileName, format: 'cjs'},
   ],
   // Indicate here external modules you don't wanna include in your bundle (i.e.: 'lodash')
-  external: [
-    '@oclif/command',
-    '@oclif/config',
-    '@oclif/plugin-help',
-  ],
+  external(id) {
+    return [
+      '@oclif',
+    ].includes(id.split('/')[0])
+  },
   watch: {
     include: 'src/**',
   },
