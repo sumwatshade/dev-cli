@@ -11,7 +11,8 @@
     "@oclif/command": "1.8.0",
     "@oclif/config": "1.16.0",
     "@oclif/plugin-help": "3.2.1",
-    "chalk": "4.1.0"
+    "chalk": "4.1.0",
+    "react": "^17.0.1"
   },
   "devDependencies": {
     "@auto-it/all-contributors": "^10.2.3",
@@ -63,7 +64,7 @@
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc",
-    "prepack": "rm -rf lib && rollup -c rollup.config.ts && oclif-dev manifest && oclif-dev readme",
+    "prepack": "rm -rf lib && rollup -c rollup.config.ts && oclif-dev manifest",
     "test": "echo NO TESTS",
     "version": "oclif-dev readme && git add README.md"
   },
