@@ -1,5 +1,5 @@
 import {Command, flags} from '@oclif/command'
-
+import chalk from 'chalk'
 export default class Hello extends Command {
   static description = 'describe the command here'
 
@@ -20,13 +20,12 @@ hello world from ./src/hello.ts!
   static args = [{name: 'file'}]
 
   async run() {
-    const {args, flags} = this.parse(Hello)
+    const {flags} = this.parse(Hello)
 
     const name = flags.name ?? 'world'
-    console.log('test')
-    this.log(`hello ${name} from ./src/commands/hello.ts`)
-    if (args.file && flags.force) {
-      this.log(`you input --force and --file: ${args.file}`)
+    this.log(chalk`{blue hello ${name} from ${__dirname}}`)
+    if (flags.force) {
+      this.log('you input --force')
     }
   }
 }
