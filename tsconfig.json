@@ -1,10 +1,8 @@
 {
   "compilerOptions": {
     "importHelpers": true,
-    "module": "ES2015",
     "rootDir": "src",
     "strict": true,
-    "target": "ES5",
     "moduleResolution": "node"
   },
   "include": [

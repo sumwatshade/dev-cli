@@ -13,7 +13,11 @@ export default files.map(fileName => ({
     {file: `lib/${fileName.replace('.ts', '.js')}`, name: fileName, format: 'cjs'},
   ],
   // Indicate here external modules you don't wanna include in your bundle (i.e.: 'lodash')
-  external: [],
+  external: [
+    '@oclif/command',
+    '@oclif/config',
+    '@oclif/plugin-help',
+  ],
   watch: {
     include: 'src/**',
   },
@@ -26,8 +30,8 @@ export default files.map(fileName => ({
       exclude: /node_modules/,
       sourceMap: false,
       minify: false,
-      target: 'es5',
     }),
+    // typescript(),
     // Allow bundling cjs modules (unlike webpack, rollup doesn't understand cjs)
     commonjs(),
     // Allow node_modules resolution, so you can use 'external' to control
