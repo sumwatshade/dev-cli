@@ -9,7 +9,7 @@
   "bugs": "https://github.com/lshadler/dev-cli/issues",
   "dependencies": {
     "@oclif/command": "1.8.0",
-    "@oclif/config": "1.16.0",
+    "@oclif/config": "1.17.0",
     "@oclif/plugin-help": "3.2.1",
     "chalk": "4.1.0",
     "react": "^17.0.1"
