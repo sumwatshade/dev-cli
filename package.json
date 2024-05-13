@@ -10,7 +10,7 @@
   "dependencies": {
     "@oclif/command": "1.8.0",
     "@oclif/config": "1.16.0",
-    "@oclif/plugin-help": "3.2.1",
+    "@oclif/plugin-help": "3.2.17",
     "chalk": "4.1.0",
     "react": "^17.0.1"
   },
